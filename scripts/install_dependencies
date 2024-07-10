@@ -1,7 +1,5 @@
 #!/bin/bash
 sudo apt install apache2 -y
-#!/bin/bash
-
 # Update package manager
 sudo yum update -y
 
