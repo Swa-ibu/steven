@@ -1,14 +1,25 @@
 #!/bin/bash
 # Update package manager
-sudo yum update -y
+sudo apt-get update -y
 
 # Install dependencies
-sudo yum install -y ruby wget
+sudo apt-get install -y ruby wget
 
 # Download and install CodeDeploy agent
 wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
+
+# Start CodeDeploy agent
+sudo service codedeploy-agent start
+
+# Check CodeDeploy agent status
+sudo service codedeploy-agent status
+
+chmod +x ./install
+sudo ./install auto
+chmod +x setup_codedeploy.sh
+sudo ./setup_codedeploy.sh
 
 # Start CodeDeploy agent
 sudo service codedeploy-agent start
