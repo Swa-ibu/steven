@@ -27,4 +27,4 @@ sudo service codedeploy-agent start
 # Check CodeDeploy agent status
 sudo service codedeploy-agent status
 
-sudo apt install apache2 -y
+sudo apt install nginx
